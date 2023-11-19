@@ -1,0 +1,49 @@
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+
+#nav-text {
+    color: black;
+}
+
+body {
+    background-color: #c4c4c4;
+}
+
+.red {
+    background-color: #b54756;
+    color:ivory;
+}
+
+.yellow {
+    background-color: #b98d74;
+    color: ivory;
+}
+
+.grey {
+    background-color: #4f4e4f;
+    color: ivory;
+}
+
+#skills, #social, #add-on{
+    margin: 1%;
+    background-color: ivory;
+    border: 1px solid wheat;
+    padding: 0 20px 25px 25px;
+    border-radius: 10px;
+}
+
+#add-on {
+    padding-top: -15px;;
+    border-radius: 20px;
+}
+
+.form-check-input {
+    border-color: black;
+}
+
+.form-check {
+    cursor: pointer;
+}
