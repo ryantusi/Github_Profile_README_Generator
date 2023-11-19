@@ -33,12 +33,12 @@ const generate_facts = (fact, val) => {
 };
 
 const generate_visitors = (name) => {
-    const url = `<p align="left"><img src="https://komarev.com/ghpvc/?username=${name}&label=Profile%20views&color=0e75b6&style=flat" /></p>`;
+    const url = `<img align="left" src="https://komarev.com/ghpvc/?username=${name}&label=Profile%20views&color=0e75b6&style=flat" />`;
     return url;
 };
 
 const generate_trophy = (name) => {
-    const url = `<p align="center"><img src="https://github-profile-trophy.vercel.app/?username=${name}" /></p>`;
+    const url = `<img align="center" src="https://github-profile-trophy.vercel.app/?username=${name}" />`;
     return url;
 };
 
@@ -57,15 +57,30 @@ const generate_streaks = (name) => {
     return url;
 }
 
-const generate_image = (link) => {
-    const img = `<img src="${link}" />`
+const generate_banner = (link) => {
+    const img = `<img align="center" src="${link}" />`
     return img;
 }
 
-const generate_skill = (val) => {
-    const api = `https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/${val}.svg`;
-    const skill = `<img src="${api}" width='40' height='40' title='${val}'/>`;
+const generate_image = (link) => {
+    const img = `<img align="right" src="${link}" />`
+    return img;
+};
+
+const generate_skill = (folder, file) => {
+    const api = `https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/${folder}/${file}.svg`;
+    const skill = `<img src="${api}" width='40' height='40' title='${file}'/>`;
     return skill;
-}
+};
+
+const generate_social = (file, link) => {
+    const api = `https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Social/${file}.svg`;
+    const social = `<a href="${link}"><img src="${api} width='40" height='40' title="${file}"/></a>`
+    return social;
+};
+
+const generate_README = () => {
+    const arr = [];
+};
 
 
