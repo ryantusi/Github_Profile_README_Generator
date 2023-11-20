@@ -1,6 +1,6 @@
 # 👨‍💻 GitHub Profile README Generator
 
-![Project Banner](images/banner.png)
+![Project Banner](screenshots/codecrafts.png)
 
 The GitHub Profile README Generator is a web-based tool that empowers users to create dynamic and eye-catching READMEs for their GitHub profiles. The generator allows users to customize their README with various sections, including user description, skills, GitHub stats, trophies, and more. It enables users to showcase their personality and achievements in a visually appealing format.
 
@@ -22,8 +22,8 @@ The GitHub Profile README Generator is a web-based tool that empowers users to c
 
 ## 🖼️ Screenshots
 
-![Screenshot 1](images/screenshot1.png)
-![Screenshot 2](images/screenshot2.png)
+![Screenshot 1](screenshots/cc_sc1.png)
+![Screenshot 2](screenshots/cc_sc2.png)
 
 ## 💻 Technologies Used
 
@@ -45,5 +45,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 This is the final project for CS50 course by Harvard University.
 
-- [Ryan Tusi](https://github.com/ryantusi/)
+- [Ryan Tusi](https://github.com/ryantusi/) - [Connect with me](https://www.linkedin.com/in/ryantusi/)
 - [Harvard CS50](https://pll.harvard.edu/course/cs50-introduction-computer-science)
