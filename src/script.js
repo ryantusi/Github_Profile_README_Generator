@@ -1,8 +1,11 @@
 const generated_file = document.getElementById("file");
 const copy = document.getElementById("copy");
+const text = document.getElementById("file");
+
 document.addEventListener('DOMContentLoaded', function () {
     generated_file.style.display = "none";
-    copy.style.display = "none";
+    copy.style.display = "none"
+    text.innerHTML = "";
 });
 
 const programming = [
@@ -653,8 +656,6 @@ const generate = document.getElementById("generate");
 generate.addEventListener('click', generate_README);
 
 const copyText = () => {
-    const text = document.getElementById("file");
-
     text.select();
     text.setSelectionRange(0, 99999);
     
