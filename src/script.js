@@ -100,7 +100,7 @@ const generate_name = (name) => {
 };
 
 const generate_description = (desc) => {
-    const opening = `<h4 align="center">${desc}</h4>`;
+    const opening = `<h5 align="center">${desc}</h5><br>`;
     return opening;
 };
 
@@ -130,7 +130,7 @@ const generate_visitors = (name) => {
 };
 
 const generate_trophy = (name) => {
-    const url = `<img align="center" src="https://github-profile-trophy.vercel.app/?username=${name}" />`;
+    const url = `<img width="100%" align="center" src="https://github-profile-trophy.vercel.app/?username=${name}" />`;
     return url;
 };
 
@@ -140,22 +140,22 @@ const generate_topSkills = (name) => {
 };
 
 const generate_stats = (name) => {
-    const url = `<img align="right" src="https://github-readme-stats.vercel.app/api?username=${name}&show_icons=true&locale=en" />`;
+    const url = `<img width="50%" align="left" src="https://github-readme-stats.vercel.app/api?username=${name}&show_icons=true&locale=en" />`;
     return url
 };
 
 const generate_streaks = (name) => {
-    const url = `<img align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=${name}&" />`;
+    const url = `<img width="50%" align="left" src="https://github-readme-streak-stats.herokuapp.com/?user=${name}&" />`;
     return url;
 }
 
 const generate_banner = (link) => {
-    const img = `<img align="center" src="${link}" />`
+    const img = `<img width="100%" align="center" src="${link}" />`
     return img;
 }
 
 const generate_image = (link) => {
-    const img = `<img align="right" src="${link}" />`
+    const img = `<img width="30%" align="right" src="${link}" /><br>`
     return img;
 };
 
@@ -167,7 +167,7 @@ const generate_skill = (folder, file) => {
 
 const generate_social = (file, link) => {
     const api = `https://raw.githubusercontent.com/ryantusi/Github_Profile_README_Generator/main/src/images/icons/Social/${file}.svg`;
-    const social = `<a href="${link}"><img src="${api} width='40" height='40' title="${file}"/></a>`
+    const social = `<a href="${link}"><img src="${api}" width="40" height='40' title="${file}"/></a>`
     return social;
 };
 
@@ -182,30 +182,27 @@ const isNull = (element) => {
 const generate_README = () => {
     const arr = [];
     let skills = "";
+    let socials = "";
     let count;
     let temp;
 
     let name = document.getElementById("name").value;
-    let user = document.getElementById("username").value;
+    let username = document.getElementById("username").value;
     let desc = document.getElementById("description").value;
 
     temp = generate_name(name);
     arr.push(temp);
 
-    let banner = document.getElementById("banner");
+    let banner = document.getElementById("banner").value;
     if (!isNull(banner)) {
         temp = generate_banner(banner);
         arr.push(temp);
     }
 
-    let visits = document.getElementById("visitors").val;
-    if (!isNull(visits)) {
-        temp = generate_visitors(username);
+    if (!isNull(desc)) {
+        temp = generate_description(desc);
         arr.push(temp);
     }
-
-    temp = generate_description(description).value;
-    arr.push(temp);
 
     let image = document.getElementById("image").value;
     if (!isNull(image)) {
@@ -228,8 +225,8 @@ const generate_README = () => {
     arr.push(temp);
 
     for (let i = 0; i < programming.length; i++) {
-        let element = document.getElementById(programming[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(programming[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -250,11 +247,14 @@ const generate_README = () => {
     skills = "";
 
     let top_skills = document.getElementById("top_skills");
-    if (!is)
+    if (top_skills.checked) {
+        temp = generate_topSkills(username);
+        arr.push(temp)
+    }
 
     for (let i = 0; i < frontend.length; i++) {
-        let element = document.getElementById(frontend[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(frontend[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -275,8 +275,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < backend.length; i++) {
-        let element = document.getElementById(backend[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(backend[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -297,8 +297,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < mobile.length; i++) {
-        let element = document.getElementById(mobile[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(mobile[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -319,8 +319,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < AI_ML.length; i++) {
-        let element = document.getElementById(AI_ML[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(AI_ML[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -341,8 +341,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < database.length; i++) {
-        let element = document.getElementById(database[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(database[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -363,8 +363,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < visualization.length; i++) {
-        let element = document.getElementById(visualization[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(visualization[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -385,8 +385,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < devops.length; i++) {
-        let element = document.getElementById(devops[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(devops[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -407,8 +407,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < baas.length; i++) {
-        let element = document.getElementById(baas[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(baas[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -429,8 +429,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < framework.length; i++) {
-        let element = document.getElementById(framework[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(framework[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -451,8 +451,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < testing.length; i++) {
-        let element = document.getElementById(testing[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(testing[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -473,8 +473,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < softwares.length; i++) {
-        let element = document.getElementById(softwares[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(softwares[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -495,8 +495,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < static.length; i++) {
-        let element = document.getElementById(static[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(static[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -517,8 +517,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < game.length; i++) {
-        let element = document.getElementById(game[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(game[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -539,8 +539,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < automation.length; i++) {
-        let element = document.getElementById(automation[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(automation[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -561,8 +561,8 @@ const generate_README = () => {
     skills = "";
 
     for (let i = 0; i < others.length; i++) {
-        let element = document.getElementById(others[i]).value;
-        if (!isNull(element)) {
+        let element = document.getElementById(others[i]);
+        if (element.checked) {
             if (count == 0) {
                 skills += "<p align='left'>";
             }
@@ -582,6 +582,61 @@ const generate_README = () => {
     count = 0;
     skills = "";
 
+    arr.push("<br><hr><br>")
+
+    let trophy = document.getElementById("trophy");
+    if (trophy.checked) {
+        temp = generate_trophy(username);
+        arr.push(temp);
+    }
+
+    let stats = document.getElementById("stats")
+    if (stats.checked) {
+        temp = generate_stats(username);
+        arr.push(temp)
+    }
+
+    let streak = document.getElementById("streaks");
+    if (streak.checked) {
+        temp = generate_streaks(username);
+        arr.push(temp);
+    }
+
+    let visits = document.getElementById("visitors");
+    if (visits.checked) {
+        temp = generate_visitors(username);
+        arr.push(temp);
+    }
+
+    for (let i = 0; i < social.length; i++) {
+        try {
+            let element = document.getElementById(social[i]).value;
+            if (!isNull(element)) {
+                if (count == 0) {
+                    socials += "<p align='left'>";
+                }
+                temp = generate_social(social[i], element);
+                socials += temp;
+                count++;
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    if (count > 0) {
+        temp = generate_heading("Connect with Me");
+        arr.push(temp);
+        socials += "</p>";
+        arr.push(socials);
+    }
+
+    count = 0;
+    socials = "";
+
+    const readme = arr.join("\n\n");
+
+    document.getElementById("file").innerHTML = readme;
 };
 
 

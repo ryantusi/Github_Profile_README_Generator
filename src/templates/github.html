@@ -79,7 +79,7 @@
               </div>
               <br>
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Provide a description about yourself" id="description"></textarea>
+                <textarea class="form-control" placeholder="Provide a description about yourself" id="description" style="height: 150px;"></textarea>
                 <label for="description">Provide a Description</label>
               </div>      
               <hr>        
@@ -1086,13 +1086,13 @@
                   <span class="input-group-text" id="addon-wrapping">
                     <img src="/src/images/icons/Social/github.svg" title="github" width="25" height="25" />
                   </span>
-                  <input type="text" id="github" class="form-control" placeholder="Link to Github account" aria-label="Link to account" aria-describedby="addon-wrapping" required>
+                  <input type="text" id="github" class="form-control" placeholder="Link to Github account" aria-label="Link to account" aria-describedby="addon-wrapping">
                 </div>
                 <div class="input-group flex-nowrap">
                   <span class="input-group-text" id="addon-wrapping">
-                    <img src="/src/images/icons/Social/linked-in-title.svg" title="linked-in" width="25" height="25" />
+                    <img src="/src/images/icons/Social/linked-in-alt.svg" title="linked-in" width="25" height="25" />
                   </span>
-                  <input type="text" id="linked-in" class="form-control" placeholder="Link to linked-in account" aria-label="Link to account" aria-describedby="addon-wrapping">
+                  <input type="text" id="linked-in-alt" class="form-control" placeholder="Link to linked-in account" aria-label="Link to account" aria-describedby="addon-wrapping">
                 </div>
                 <div class="input-group flex-nowrap">
                   <span class="input-group-text" id="addon-wrapping">
@@ -1240,9 +1240,15 @@
               </div> 
               <br><hr><br>
 
-              <button type="button" class="btn btn-outline-danger btn-lg">GENERATE README</button>
+              <button onclick="generate_README()" type="button" class="btn btn-outline-danger btn-lg">GENERATE README</button>
                
             </form>
+
+            <br><hr><br>
+            <div class="form-floating">
+              <textarea class="form-control" id="file" style="height: 500px"></textarea>
+            </div>
+            
           </main>
 
           <!-- Copyright-->
