@@ -1,6 +1,8 @@
 const generated_file = document.getElementById("file");
+const copy = document.getElementById("copy");
 document.addEventListener('DOMContentLoaded', function () {
     generated_file.style.display = "none";
+    copy.style.display = "none";
 });
 
 const programming = [
@@ -644,7 +646,20 @@ const generate_README = () => {
     document.getElementById("file").innerHTML = readme;
 
     generated_file.style.display = "block";
+    copy.style.display = "block";
 };
 
 const generate = document.getElementById("generate");
 generate.addEventListener('click', generate_README);
+
+const copyText = () => {
+    const text = document.getElementById("file");
+
+    text.select();
+    text.setSelectionRange(0, 99999);
+    
+    document.execCommand('copy');
+    alert("README.MD code copied to clipboard");
+};
+
+copy.addEventListener('click', copyText);
