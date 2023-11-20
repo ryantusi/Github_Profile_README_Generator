@@ -1,3 +1,8 @@
+const generated_file = document.getElementById("file");
+document.addEventListener('DOMContentLoaded', function () {
+    generated_file.style.display = "none";
+});
+
 const programming = [
     "c", "cpp", "csharp", "go", "java", "javascript", "php",
     "perl", "ruby", "scala",  "python", "swift", "objectivec",
@@ -637,6 +642,9 @@ const generate_README = () => {
     const readme = arr.join("\n\n");
 
     document.getElementById("file").innerHTML = readme;
+
+    generated_file.style.display = "block";
 };
 
-
+const generate = document.getElementById("generate");
+generate.addEventListener('click', generate_README);
