@@ -74,6 +74,11 @@
               </div>
               <br>
               <div class="form-floating">
+                <input type="text" class="form-control" id="username" placeholder="username">
+                <label for="username">Github Username</label>
+              </div>
+              <br>
+              <div class="form-floating">
                 <textarea class="form-control" placeholder="Provide a description about yourself" id="description"></textarea>
                 <label for="description">Provide a Description</label>
               </div>      
@@ -1081,7 +1086,7 @@
                   <span class="input-group-text" id="addon-wrapping">
                     <img src="/src/images/icons/Social/github.svg" title="github" width="25" height="25" />
                   </span>
-                  <input type="text" id="github" class="form-control" placeholder="Link to Github account" aria-label="Link to account" aria-describedby="addon-wrapping">
+                  <input type="text" id="github" class="form-control" placeholder="Link to Github account" aria-label="Link to account" aria-describedby="addon-wrapping" required>
                 </div>
                 <div class="input-group flex-nowrap">
                   <span class="input-group-text" id="addon-wrapping">
@@ -1244,5 +1249,6 @@
           <footer class="mb-5 small text-center text-muted">
             <h6>CS50x2023 Final Project ~ Ryan Tusi</h6> 
         </footer>
+        <script src="/src/script.js"></script>
     </body>
 </html>
