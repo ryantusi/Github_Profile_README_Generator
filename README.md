@@ -24,9 +24,10 @@ The GitHub Profile README Generator is a web-based tool that empowers users to c
 
 ![Screenshot 1](screenshots/cc_sc1.png)
 ![Screenshot 2](screenshots/cc_sc2.png)
-![Screenshot 5](screenshots/cc_sc5.png)
 ![Screenshot 3](screenshots/cc_sc3.png)
 ![Screenshot 4](screenshots/cc_sc4.png)
+![Screenshot 5](screenshots/cc_sc5.png)
+<br><hr><br>
 
 ## 💻 Technologies Used
 
