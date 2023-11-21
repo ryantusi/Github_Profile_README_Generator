@@ -15,7 +15,7 @@ The GitHub Profile README Generator is a web-based tool that empowers users to c
 
 ## 📝 How to Use
 
-1. **Access the Generator**: Visit the [Codecraft](https://your-generator-url.com) website.
+1. **Access the Generator**: Visit the [Codecrafts](https://ryantusi.github.io/Github_Profile_README_Generator/) website.
 2. **Customize Your README**: Select the sections you want to include, provide the necessary details, and customize the appearance.
 3. **Generate README**: Click the 'Generate README' button to generate the markdown code for your profile README.
 4. **Copy Markdown**: Copy the generated markdown and paste it into your GitHub profile's README.md file.
