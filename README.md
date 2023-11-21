@@ -1,4 +1,5 @@
 # 👨‍💻 GitHub Profile README Generator
+### Video demo: [click here](https://www.youtube.com/watch?v=Io-POzQf4jc)
 
 ![Project Banner](screenshots/codecrafts.png)
 
@@ -36,6 +37,18 @@ The GitHub Profile README Generator is a web-based tool that empowers users to c
 - Bootstrap
 - JavaScript
 - GitHub API
+
+## 📄 Files
+
+**Branches**: 
+- `main` branch: contains source code and assets
+- `host` branch: for hosting pages
+
+**src**: This contains all the source code and assets like images and icons
+- `script.js`: main javascript file generates plain form text into markdown format text with github API
+- `/templates`: contains HTML files: `index.html` and `github.html`
+- `/static`: contains CSS file: `styles.css`
+- `/images`: contains assets like images and icons rendered in HTML files
 
 ## 🤝 Contribution
 
