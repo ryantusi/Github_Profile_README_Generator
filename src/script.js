@@ -193,7 +193,7 @@ const generate_README = () => {
     const arr = [];
     let skills = "";
     let socials = "";
-    let count;
+    let count = 0;
     let temp;
 
     let name = document.getElementById("name").value;
