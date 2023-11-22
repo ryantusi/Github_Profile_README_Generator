@@ -87,7 +87,7 @@ const others = [
 ];
 
 const social = [
-    "github", "linked-in", "twitter", "facebook", "instagram",
+    "github", "linked-in-alt", "twitter", "facebook", "instagram",
     "youtube", "discord", "codepen", "google", "hackerrank", "kaggle",
     "leet-code", "medium", "pinterest", "reddit", "stack-overflow",
     "topcoder", "twitch"
